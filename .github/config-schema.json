@@ -311,6 +311,7 @@
         "detect_files": [
           "deno.json",
           "deno.jsonc",
+          "deno.lock",
           "mod.ts",
           "deps.ts",
           "mod.js",
@@ -1714,7 +1715,7 @@
         "not_executable_symbol": "🚫",
         "not_found_symbol": "🔍",
         "pipestatus": false,
-        "pipestatus_format": "\\[$pipestatus\\] => [$symbol$common_meaning$signal_name$maybe_int]($style)",
+        "pipestatus_format": "\\[$pipestatus\\] => [$symbol$common_meaning$signal_name$maybe_int]($style) ",
         "pipestatus_separator": "|",
         "recognize_signal_code": true,
         "sigint_symbol": "🧱",
@@ -2739,6 +2740,7 @@
           "default": [
             "deno.json",
             "deno.jsonc",
+            "deno.lock",
             "mod.ts",
             "deps.ts",
             "mod.js",
@@ -6004,7 +6006,7 @@
           "type": "string"
         },
         "pipestatus_format": {
-          "default": "\\[$pipestatus\\] => [$symbol$common_meaning$signal_name$maybe_int]($style)",
+          "default": "\\[$pipestatus\\] => [$symbol$common_meaning$signal_name$maybe_int]($style) ",
           "type": "string"
         },
         "pipestatus_segment_format": {
