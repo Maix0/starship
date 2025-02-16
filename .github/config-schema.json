@@ -87,6 +87,7 @@
       "default": {
         "detect_extensions": [],
         "detect_files": [
+          "bun.lock",
           "bun.lockb",
           "bunfig.toml"
         ],
@@ -359,6 +360,9 @@
       "default": {
         "allowed_msg": "allowed",
         "denied_msg": "denied",
+        "detect_env_vars": [
+          "DIRENV_FILE"
+        ],
         "detect_extensions": [],
         "detect_files": [
           ".envrc"
@@ -1248,6 +1252,7 @@
           "Android": "🤖 ",
           "Arch": "🎗️ ",
           "Artix": "🎗️ ",
+          "CachyOS": "🎗️ ",
           "CentOS": "💠 ",
           "Debian": "🌀 ",
           "DragonFly": "🐉 ",
@@ -1269,6 +1274,7 @@
           "Mint": "🌿 ",
           "NetBSD": "🚩 ",
           "NixOS": "❄️ ",
+          "Nobara": "🎩 ",
           "OpenBSD": "🐡 ",
           "OpenCloudOS": "☁️ ",
           "OracleLinux": "🦴 ",
@@ -1283,6 +1289,7 @@
           "Ubuntu": "🎯 ",
           "Ultramarine": "🔷 ",
           "Unknown": "❓ ",
+          "Uos": "🐲 ",
           "Void": "  ",
           "Windows": "🪟 ",
           "openEuler": "🦉 ",
@@ -2222,6 +2229,7 @@
         },
         "detect_files": {
           "default": [
+            "bun.lock",
             "bun.lockb",
             "bunfig.toml"
           ],
@@ -2863,6 +2871,15 @@
         },
         "detect_extensions": {
           "default": [],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "detect_env_vars": {
+          "default": [
+            "DIRENV_FILE"
+          ],
           "type": "array",
           "items": {
             "type": "string"
@@ -4950,6 +4967,7 @@
             "Android": "🤖 ",
             "Arch": "🎗️ ",
             "Artix": "🎗️ ",
+            "CachyOS": "🎗️ ",
             "CentOS": "💠 ",
             "Debian": "🌀 ",
             "DragonFly": "🐉 ",
@@ -4971,6 +4989,7 @@
             "Mint": "🌿 ",
             "NetBSD": "🚩 ",
             "NixOS": "❄️ ",
+            "Nobara": "🎩 ",
             "OpenBSD": "🐡 ",
             "OpenCloudOS": "☁️ ",
             "OracleLinux": "🦴 ",
@@ -4985,6 +5004,7 @@
             "Ubuntu": "🎯 ",
             "Ultramarine": "🔷 ",
             "Unknown": "❓ ",
+            "Uos": "🐲 ",
             "Void": "  ",
             "Windows": "🪟 ",
             "openEuler": "🦉 ",
@@ -5988,6 +6008,18 @@
         "style": {
           "default": "bold red",
           "type": "string"
+        },
+        "success_style": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "failure_style": {
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "map_symbol": {
           "default": false,

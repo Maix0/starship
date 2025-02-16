@@ -16,6 +16,10 @@ pub struct StatusConfig<'a> {
     pub sigint_symbol: &'a str,
     pub signal_symbol: &'a str,
     pub style: &'a str,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub success_style: Option<&'a str>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub failure_style: Option<&'a str>,
     pub map_symbol: bool,
     pub recognize_signal_code: bool,
     pub pipestatus: bool,
@@ -26,7 +30,7 @@ pub struct StatusConfig<'a> {
     pub disabled: bool,
 }
 
-impl<'a> Default for StatusConfig<'a> {
+impl Default for StatusConfig<'_> {
     fn default() -> Self {
         StatusConfig {
             format: "[$symbol$status]($style) ",
@@ -37,6 +41,8 @@ impl<'a> Default for StatusConfig<'a> {
             sigint_symbol: "🧱",
             signal_symbol: "⚡",
             style: "bold red",
+            success_style: None,
+            failure_style: None,
             map_symbol: false,
             recognize_signal_code: true,
             pipestatus: false,
